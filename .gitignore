@@ -1,4 +1,5 @@
 .DS_STORE
 .idea/
+.gradle/
 target/
-gradle/
+*.iml
