@@ -113,7 +113,9 @@ fun decode(decoder: Decoder, address:Int, msb: Byte, lsb: Byte) {
     }
 }
 
+fun readRom(fileName: String): ByteArray = DataInputStream(BufferedInputStream(FileInputStream(fileName))).readBytes()
+
 fun main(args: Array<String>) {
-    val rom = DataInputStream(BufferedInputStream(FileInputStream("roms/maze.rom"))).readBytes()
+    val rom = readRom("roms/maze.rom")
     println(disassemble(rom))
 }
